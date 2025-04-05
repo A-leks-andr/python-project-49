@@ -26,10 +26,11 @@ def is_evens():
             print('Correct')
 
         else:
-            print(f'{answer} is wrong answer ;(. Correct answer was {check}')
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{check}".')
             print(f"Let's try again, {name}")
             break
 
     else:
         print(f'Congratulations, {name}')
 
+is_evens()
