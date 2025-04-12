@@ -1,5 +1,6 @@
-import prompt
 from random import randint
+
+import prompt
 
 
 def gcd(a, b):

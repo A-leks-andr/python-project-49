@@ -1,6 +1,7 @@
 import operator
-import prompt
 from random import randint
+
+import prompt
 
 
 def get_calc(name):
