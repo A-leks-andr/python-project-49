@@ -24,10 +24,10 @@ def is_evens(name):
         else:
             print(f'"{answer}" is wrong answer ;(. '
                   f'Correct answer was "{check}".')
-            print(f"Let's try again, {name}")
+            print(f"Let's try again, {name}!")
             break
 
     else:
-        print(f'Congratulations, {name}')
+        print(f'Congratulations, {name}!')
 
 
