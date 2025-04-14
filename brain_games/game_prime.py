@@ -1,15 +1,23 @@
-from random import randrange
+from random import randint
 
 import prompt
 
 
+def prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
 def is_prime(name):
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    prime_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
-                  47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103]
+    
     for _ in range(3):
-        number = randrange(1, 106, 2)
-        if number in prime_list:
+        number = randint(1, 3572)
+        if prime(number):
             check = 'yes'
         else:
             check = 'no'
