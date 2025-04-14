@@ -16,7 +16,7 @@ def get_progression(name):
         print(f'Question: {' '.join(progression)}')
         answer = prompt.string('Your answer: ')
         if answer == check:
-            print('Correct')
+            print('Correct!')
         else:
             print(f" '{answer}' is wrong answer ;(. ",
               f"Correct answer was '{check}'.")

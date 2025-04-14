@@ -19,7 +19,7 @@ def is_evens(name):
         answer = prompt.string('Your answer: ')
 
         if answer == check:
-            print('Correct')
+            print('Correct!')
 
         else:
             print(f'"{answer}" is wrong answer ;(. '
