@@ -1,6 +1,6 @@
 from random import randint
-
 import prompt
+from brain_games.q_and_a import quest_answer
 
 
 def gcd(a, b):
@@ -10,21 +10,16 @@ def gcd(a, b):
 
 
 def get_gcd(name):
-    print('Find the greatest common divisor of given numbers.')
+    print("Find the greatest common divisor of given numbers.")
 
     for i in range(3):
         a = randint(1, 50)
         b = randint(2, 50)
         check = str(gcd(a, b))
-        print(f'Question: {a} {b}')
-        answer = prompt.string('Your answer: ')
-        if answer == check:
-            print('Correct!')
-        else:
-            print(f" '{answer}' is wrong answer ;(. ",
-              f"Correct answer was '{check}'.")
-            print(f"Let's try again, {name}!")
+        quest = f"Question: {a} {b}"
+        answer = quest_answer(quest, check, name)
+        if answer == "mistake":
             break
 
     else:
-        print(f'Congratulations, {name}!')
+        print(f"Congratulations, {name}!")

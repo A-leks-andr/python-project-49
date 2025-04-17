@@ -1,6 +1,6 @@
 from random import randint
-
 import prompt
+from brain_games.q_and_a import quest_answer
 
 
 def prime(n):
@@ -14,22 +14,17 @@ def prime(n):
 
 def is_prime(name):
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    
+
     for _ in range(3):
         number = randint(1, 3572)
         if prime(number):
-            check = 'yes'
+            check = "yes"
         else:
-            check = 'no'
-        print(f'Question: {number}')
-        answer = prompt.string('Your answer: ')
-        if answer == check:
-            print('Correct!')
-        else:
-            print(f" '{answer}' is wrong answer ;(. ",
-              f"Correct answer was '{check}'.")
-            print(f"Let's try again, {name}!")
+            check = "no"
+        quest = f"Question: {number}"
+        answer = quest_answer(quest, check, name)
+        if answer == "mistake":
             break
 
     else:
-        print(f'Congratulations, {name}!')
+        print(f"Congratulations, {name}!")

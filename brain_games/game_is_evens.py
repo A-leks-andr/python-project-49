@@ -2,32 +2,23 @@ from random import randint
 
 import prompt
 
+from brain_games.q_and_a import quest_answer
 
-def is_evens(name):
 
+def which_evens(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     for _ in range(3):
-
         number = randint(1, 50)
         if number % 2 == 0:
-            check = 'yes'
+            check = "yes"
         else:
-            check = 'no'
+            check = "no"
 
-        print('Question:', number)
-        answer = prompt.string('Your answer: ')
-
-        if answer == check:
-            print('Correct!')
-
-        else:
-            print(f'"{answer}" is wrong answer ;(. '
-                  f'Correct answer was "{check}".')
-            print(f"Let's try again, {name}!")
+        quest = f"Question:  {number}"
+        answer = quest_answer(quest, check, name)
+        if answer == "mistake":
             break
 
     else:
-        print(f'Congratulations, {name}!')
-
-
+        print(f"Congratulations, {name}!")
