@@ -1,7 +1,5 @@
 from random import randint
 
-import prompt
-
 from brain_games.q_and_a import quest_answer
 
 

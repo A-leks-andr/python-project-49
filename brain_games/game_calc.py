@@ -1,6 +1,6 @@
 import operator
-import prompt
 from random import randint
+
 from brain_games.q_and_a import quest_answer
 
 
