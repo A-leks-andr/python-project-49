@@ -1,10 +1,9 @@
 from brain_games.game_progression import get_progression
-from brain_games.greet_name import greet_and_name
+from brain_games.q_and_a import quest_answer
 
 
 def main():
-    name = greet_and_name()
-    get_progression(name)
+    quest_answer(get_progression)
 
 
 if __name__ == "__main__":
