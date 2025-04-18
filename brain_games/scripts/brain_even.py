@@ -1,10 +1,9 @@
 from brain_games.game_is_evens import which_evens
-from brain_games.greet_name import greet_and_name
+from brain_games.q_and_a import quest_answer
 
 
 def main():
-    name = greet_and_name()
-    which_evens(name)
+    quest_answer(which_evens)
 
 
 if __name__ == "__main__":
