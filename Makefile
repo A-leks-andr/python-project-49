@@ -15,3 +15,6 @@ package-reinstall:
 
 lint:
 	uv run ruff check brain_games --fix
+
+format:
+	uv run ruff format
